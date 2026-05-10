@@ -802,6 +802,13 @@ with open(html_path, "w", encoding="utf-8") as f:
 
 print(f"  HTML report saved: {html_path}")
 
+# Also write to repo root as index.html so GitHub Pages serves it by default
+index_path = "index.html"
+with open(index_path, "w", encoding="utf-8") as f:
+    f.write(html)
+
+print(f"  GitHub Pages entry point saved: {index_path}")
+
 # =============================================================================
 # Done
 # =============================================================================
